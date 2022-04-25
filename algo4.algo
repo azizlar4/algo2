@@ -1,0 +1,15 @@
+
+PROCEDURE algo4(VAR arr : ARRAY_OF INTEGER)
+VAR
+    i,j,cur : INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 DO
+        cur := arr [i];
+        j := i-1;
+        WHILE (j >= 0 AND arr[j] > cur) DO
+            arr[i] := arr[j];
+            arr[j] = cur;
+        END_WHILE
+       
+    END_FOR
+END
